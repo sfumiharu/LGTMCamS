@@ -18,4 +18,10 @@ class UIButtonClass {
         takeBtn.setBackgroundImage(UIImage(named: "take.png"), forState: .Normal)
         return takeBtn
     }
+
+    func setPreviewLayer() -> UIView {
+        let previewLayer:UIView = UIView()//frame: CGRectMake(0, 0, 100, 100))
+//        previewLayer.backgroundColor = UIColor.greenColor()
+        return previewLayer
+    }
 }

@@ -9,16 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var previewLayer:UIView = UIView(frame: CGRectMake(0, 0, 200, 200))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //get front camera info
-        var aa:setupFirstTabView = setupFirstTabView()
+        var sft:setupView = setupView()
+        var setaa:setupCapture = setupCapture()
         
-        previewLayer = aa.addFirstTabView(self.view)
-        self.view.addSubview(previewLayer)
+        self.view.addSubview(sft.addPreviewLayer(self.view))
+        sft.addPreviewLayer(self.view).addSubview(sft.addFirstTabView(self.view))
+        
+        setaa.setupCaputures()
     }
     
     override func didReceiveMemoryWarning() {

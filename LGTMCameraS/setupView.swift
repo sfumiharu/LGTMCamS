@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-class setupFirstTabView {
+class setupView {
     
     var layout: UIAutolayoutClass = UIAutolayoutClass()
     
     func addFirstTabView(view: UIView) -> UIView {
         return layout.firstTabViewLayout(view)
+    }
+    
+    func addPreviewLayer(view: UIView) -> UIView {
+        return layout.previewLayerLayout(view)
     }
 }
