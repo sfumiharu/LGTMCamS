@@ -9,18 +9,26 @@
 import Foundation
 import UIKit
 
-class UIButtonClass {
-    func setTakeBtn() -> UIButton {
+class UIViewClass : UIAutolayoutClass {
+    
+    func takeBtn(view:UIView) -> UIButton {
         let takeBtn:UIButton = UIButton.buttonWithType(.Custom) as UIButton
-        takeBtn.frame = CGRectMake(0, 0, 50, 50)
-        takeBtn.layer.position = CGPoint(x: 50, y: 50)
+        takeBtn.frame = CGRectMake(0, 0, 10, 10)
         takeBtn.addTarget(self, action: "tapped", forControlEvents: .TouchUpInside)
         takeBtn.setBackgroundImage(UIImage(named: "take.png"), forState: .Normal)
+        takeBtnLayout(parrentView: view, childView: takeBtn)
         return takeBtn
     }
 
-    func setPreviewLayer() -> UIView {
-        let previewLayer:UIView = UIView()//frame: CGRectMake(0, 0, 100, 100))
+    func firstTabBaseView() -> UIView {
+        let fst:UIView = UIView()
+        fst.backgroundColor = UIColor.redColor()
+        takeBtn(fst)
+        return fst
+    }
+    
+    func previewLayer() -> UIView{
+        let previewLayer:UIView = UIView()
 //        previewLayer.backgroundColor = UIColor.greenColor()
         return previewLayer
     }

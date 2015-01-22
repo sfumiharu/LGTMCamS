@@ -10,99 +10,138 @@ import Foundation
 import UIKit
 
 class UIAutolayoutClass {
-    
-    func firstTabViewLayout(view:UIView) -> UIView{
-        var ftv = UIView()
-        var bc = UIButtonClass()
+
+    func firstTabViewLayout(#parrentView:UIView, childView:UIView) {
         
-        ftv.backgroundColor = UIColor.redColor()
-        ftv.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view.addSubview(ftv)
-        ftv.addSubview(bc.setTakeBtn())
+        childView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        parrentView.addSubview(childView)
         
         let blueTopConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:ftv,
+            item:childView,
             attribute: .Top,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Top,
             multiplier: 1,
-            constant: view.frame.size.height / 1.2)
+            constant: parrentView.frame.size.height / 1.2)
         
         let blueBottomConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:ftv,
+            item:childView,
             attribute: .Bottom,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Bottom,
             multiplier: 1,
             constant: 0)
         
         let blueLeftConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:ftv,
+            item:childView,
             attribute: .Left,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Left,
             multiplier: 1,
             constant: 0)
         
         let blueRightConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:ftv,
+            item:childView,
             attribute: .Right,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Right,
             multiplier: 1,
             constant: 0)
         
-        view.addConstraints([blueTopConstraint, blueBottomConstraint, blueLeftConstraint, blueRightConstraint]);
-        return ftv
+        parrentView.addConstraints([blueTopConstraint, blueBottomConstraint, blueLeftConstraint, blueRightConstraint]);
     }
 
-        var pl = UIView()
-    func previewLayerLayout(view:UIView) -> UIView{
+    
+    func takeBtnLayout(#parrentView:UIView, childView:UIView) {
 
-        pl.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view.addSubview(pl)
+        childView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        parrentView.addSubview(childView)
         
         let blueTopConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:pl,
+            item:childView,
             attribute: .Top,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Top,
             multiplier: 1,
-            constant: 0)
+            constant: parrentView.frame.size.height / 1.2)
         
         let blueBottomConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:pl,
+            item:childView,
             attribute: .Bottom,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Bottom,
             multiplier: 1,
             constant: 0)
         
         let blueLeftConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:pl,
+            item:childView,
             attribute: .Left,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
+            attribute: .Left,
+            multiplier: 1,
+            constant: 10)
+        
+        let blueRightConstraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:childView,
+            attribute: .Right,
+            relatedBy: .Equal,
+            toItem: parrentView,
+            attribute: .Right,
+            multiplier: 1,
+            constant: -30)
+        
+        parrentView.addConstraints([blueTopConstraint, blueBottomConstraint, blueLeftConstraint, blueRightConstraint]);
+    }
+    
+
+    func previewLayerLayout(#parrentView:UIView, childView:UIView) {
+        
+        childView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        parrentView.addSubview(childView)
+        
+        let blueTopConstraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:childView,
+            attribute: .Top,
+            relatedBy: .Equal,
+            toItem: parrentView,
+            attribute: .Top,
+            multiplier: 1,
+            constant: 0)
+        
+        let blueBottomConstraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:childView,
+            attribute: .Bottom,
+            relatedBy: .Equal,
+            toItem: parrentView,
+            attribute: .Bottom,
+            multiplier: 1,
+            constant: 0)
+        
+        let blueLeftConstraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:childView,
+            attribute: .Left,
+            relatedBy: .Equal,
+            toItem: parrentView,
             attribute: .Left,
             multiplier: 1,
             constant: 0)
         
         let blueRightConstraint:NSLayoutConstraint = NSLayoutConstraint(
-            item:pl,
+            item:childView,
             attribute: .Right,
             relatedBy: .Equal,
-            toItem: view,
+            toItem: parrentView,
             attribute: .Right,
             multiplier: 1,
             constant: 0)
         
-        view.addConstraints([blueTopConstraint, blueBottomConstraint, blueLeftConstraint, blueRightConstraint]);
-        return pl
+        parrentView.addConstraints([blueTopConstraint, blueBottomConstraint, blueLeftConstraint, blueRightConstraint]);
     }
 }

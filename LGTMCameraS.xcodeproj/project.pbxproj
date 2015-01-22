@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27B449E11A604934006A320C /* UIAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B449E01A604934006A320C /* UIAutolayout.swift */; };
-		27CDEDC51A6B488F008D903F /* UIButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDEDC41A6B488F008D903F /* UIButtonClass.swift */; };
+		27CDEDC51A6B488F008D903F /* UIViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDEDC41A6B488F008D903F /* UIViewClass.swift */; };
 		27CDEDC81A6B8914008D903F /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CDEDC71A6B8914008D903F /* search.png */; };
 		27CDEDCA1A6B898C008D903F /* take.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CDEDC91A6B898C008D903F /* take.png */; };
 		27CDEDCC1A6B8CD3008D903F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CDEDCB1A6B8CD3008D903F /* AVFoundation.framework */; };
@@ -19,7 +19,7 @@
 		27DA83EE1A3BDFFC000AC7A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27DA83ED1A3BDFFC000AC7A7 /* Images.xcassets */; };
 		27DA83F11A3BDFFC000AC7A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DA83EF1A3BDFFC000AC7A7 /* LaunchScreen.xib */; };
 		27DA83FD1A3BDFFC000AC7A7 /* LGTMCameraSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA83FC1A3BDFFC000AC7A7 /* LGTMCameraSTests.swift */; };
-		27DA84071A3BE5D8000AC7A7 /* setupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA84061A3BE5D8000AC7A7 /* setupView.swift */; };
+		27DA84071A3BE5D8000AC7A7 /* createView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA84061A3BE5D8000AC7A7 /* createView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		27B449E01A604934006A320C /* UIAutolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAutolayout.swift; sourceTree = "<group>"; };
-		27CDEDC41A6B488F008D903F /* UIButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonClass.swift; sourceTree = "<group>"; };
+		27CDEDC41A6B488F008D903F /* UIViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewClass.swift; sourceTree = "<group>"; };
 		27CDEDC71A6B8914008D903F /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		27CDEDC91A6B898C008D903F /* take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take.png; sourceTree = "<group>"; };
 		27CDEDCB1A6B8CD3008D903F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -49,7 +49,7 @@
 		27DA83F61A3BDFFC000AC7A7 /* LGTMCameraSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LGTMCameraSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DA83FB1A3BDFFC000AC7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DA83FC1A3BDFFC000AC7A7 /* LGTMCameraSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGTMCameraSTests.swift; sourceTree = "<group>"; };
-		27DA84061A3BE5D8000AC7A7 /* setupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupView.swift; sourceTree = "<group>"; };
+		27DA84061A3BE5D8000AC7A7 /* createView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +105,10 @@
 				27CDEDC61A6B8876008D903F /* Images */,
 				27DA83E61A3BDFFC000AC7A7 /* AppDelegate.swift */,
 				27DA83E81A3BDFFC000AC7A7 /* ViewController.swift */,
-				27DA84061A3BE5D8000AC7A7 /* setupView.swift */,
+				27DA84061A3BE5D8000AC7A7 /* createView.swift */,
+				27CDEDC41A6B488F008D903F /* UIViewClass.swift */,
 				27CDEDCD1A6B9545008D903F /* setupCapture.swift */,
 				27B449E01A604934006A320C /* UIAutolayout.swift */,
-				27CDEDC41A6B488F008D903F /* UIButtonClass.swift */,
 				27DA83EA1A3BDFFC000AC7A7 /* Main.storyboard */,
 				27DA83ED1A3BDFFC000AC7A7 /* Images.xcassets */,
 				27DA83EF1A3BDFFC000AC7A7 /* LaunchScreen.xib */,
@@ -254,8 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27DA84071A3BE5D8000AC7A7 /* setupView.swift in Sources */,
-				27CDEDC51A6B488F008D903F /* UIButtonClass.swift in Sources */,
+				27DA84071A3BE5D8000AC7A7 /* createView.swift in Sources */,
+				27CDEDC51A6B488F008D903F /* UIViewClass.swift in Sources */,
 				27CDEDCE1A6B9545008D903F /* setupCapture.swift in Sources */,
 				27DA83E91A3BDFFC000AC7A7 /* ViewController.swift in Sources */,
 				27B449E11A604934006A320C /* UIAutolayout.swift in Sources */,

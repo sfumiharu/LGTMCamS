@@ -11,41 +11,40 @@ import UIKit
 import AVFoundation
 
 class setupCapture {
-    
-    var vc:ViewController = ViewController()
+
+    var alc:UIViewClass = UIViewClass()
     var stillImageOutPut:AVCaptureStillImageOutput = AVCaptureStillImageOutput()
     var conn:AVCaptureConnection = AVCaptureConnection()
-    var deviceOrientation:UIDeviceOrientation = UIDevice.currentDevice().orientation //UIDeviceOrientation()
+    var deviceOrientation:UIDeviceOrientation = UIDevice.currentDevice().orientation
     
     func setupCaputures() {
+        var session:AVCaptureSession = AVCaptureSession()
         
-        let error:NSErrorPointer = NSErrorPointer()
         var camera:AVCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        var videoInput:AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(camera, error:error) as AVCaptureDeviceInput
+        var videoInput:AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(camera, error:nil) as AVCaptureDeviceInput
 
 //    create input of camera. add camera to session.
-        var captureSession:AVCaptureSession = AVCaptureSession()
-        if captureSession.canAddInput(videoInput) {
-            captureSession.addInput(videoInput)
+        if session.canAddInput(videoInput) {
+            session.addInput(videoInput)
         }
         
 //    UIVIewへの出力を作成し、sessionに追加
 
-        captureSession.addOutput(stillImageOutPut)
+        session.addOutput(stillImageOutPut)
         
-        var captureVideoPreviewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.layerWithSession(captureSession)
-     as AVCaptureVideoPreviewLayer
-        captureVideoPreviewLayer.frame = vc.previewLayer.frame
+        var captureVideoPreviewLayer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.self(session: session)
+     
+        captureVideoPreviewLayer.frame = alc.previewLayer().frame
         captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         
 //        setVideoOrientation()
-        
+
         var previewLayer:CALayer = CALayer()
-        previewLayer = vc.previewLayer.layer
+        previewLayer = alc.previewLayer().layer
         previewLayer.masksToBounds = true
         previewLayer.addSublayer(captureVideoPreviewLayer)
         
-        captureSession.startRunning()
+        session.startRunning()
     }
     
 //    func setVideoOrientation() {
@@ -55,7 +54,7 @@ class setupCapture {
 //            }
 //        }
 //    }
-//    
+    
 //    func videoOrientation() -> AVCaptureVideoOrientation {
 //        switch deviceOrientation {
 //        case .LandscapeLeft:        return .LandscapeRight
