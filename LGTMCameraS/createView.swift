@@ -10,13 +10,17 @@ import Foundation
 import UIKit
 
 class createView : UIViewClass{
+    override init() {
+        
+    }
+        var pLayer:UIView = UIView()
     
     func creatFirstTabView(view:UIView) {
         firstTabViewLayout(parrentView: view, childView: firstTabBaseView())
     }
     
     func createPreviewLayer(view:UIView) {
-        previewLayerLayout(parrentView: view, childView: previewLayer())
+        previewLayerLayout(parrentView: view, childView: pLayer)
     }
     
 }

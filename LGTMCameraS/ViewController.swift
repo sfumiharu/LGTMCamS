@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         sft.creatFirstTabView(self.view)
         
         var sss:setupCapture = setupCapture()
-//        sss.setupCaputures()
+        sss.setupCaputures()
         
     }
     

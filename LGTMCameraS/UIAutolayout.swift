@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UIAutolayoutClass {
+class UIAutolayoutClass : UIViewController{
 
     func firstTabViewLayout(#parrentView:UIView, childView:UIView) {
         

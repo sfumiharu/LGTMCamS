@@ -11,6 +11,8 @@ import UIKit
 
 class UIViewClass : UIAutolayoutClass {
     
+
+    
     func takeBtn(view:UIView) -> UIButton {
         let takeBtn:UIButton = UIButton.buttonWithType(.Custom) as UIButton
         takeBtn.frame = CGRectMake(0, 0, 10, 10)
@@ -27,9 +29,8 @@ class UIViewClass : UIAutolayoutClass {
         return fst
     }
     
-    func previewLayer() -> UIView{
-        let previewLayer:UIView = UIView()
-//        previewLayer.backgroundColor = UIColor.greenColor()
-        return previewLayer
-    }
+//    func previewLayer() -> UIView{
+//        pLayer.backgroundColor = UIColor.greenColor()
+//        return pLayer
+//    }
 }
